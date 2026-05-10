@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple fitness website with workouts, quiz and contact form">
+    <meta name="keywords" content="fitness, workout, health">
+    <title>LifeIsFit</title>
+    <!--to add favicon-->
+    <link rel="icon" href="images/favicon.png">
+    <!--to add web fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="LifeIsFit_style.css">
+</head>
+<body>
+    <header>
+        <h1>LifeIsFit</h1>
+            <div class="logo">
+        <img src="images/logo.png" alt="FitLife logo">
+    </div>
+        <!--to add a navigation section-->
+        <nav>
+            <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#workouts">Workouts</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h2>Start Your Fitness Journey</h2>
+        <video controls>
+            <source src="videos/workout.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section id="workouts">
+    <h2>Workout Tips</h2>
+    <!--to add column section-->
+    <article class="columns">
+        <p>Exercise keeps your body strong and your mind healthy. Stay consistent</p>
+        <p>Warm up, hydrate, and rest properly to avoid injuries.</p>
+    </article>
+    <audio controls>
+        <source src="audios/workout audio.mp3" type="audio/mpeg">
+    </audio>
+    <details>
+        <summary>Beginner Tips</summary>
+        <p>Start slow and focus on your form.</p>
+    </details>
+    <label>Weekly Progress</label>
+    <progress value="60" max="100"></progress>
+</section>
+<!--to add quiz section-->
+<section id="quiz">
+    <h2>Quick Quiz</h2>
+
+    <p>How many days should you exercise weekly?</p>
+    <button onclick="checkAnswer(true)">3-5 Days</button>
+    <button onclick="checkAnswer(false)">1 Day</button>
+
+    <p id="quizResult"></p>
+</section>
+<section id="contact">
+    <h2>Contact</h2>
+
+    <!--this is to make a contact form-->
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <span class="error" id="nameError"></span>
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <span class="error" id="emailError"></span>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+<footer>
+    <p>© 2026 LifeIsFit</p>
+</footer>
+<script src="LifeIsFit_script.js"></script>
+
+</body>
+</html>
